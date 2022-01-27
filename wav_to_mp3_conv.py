@@ -39,7 +39,9 @@ if __name__ == '__main__':
     input_files = sorted(input_files)
     for input_file in input_files:
         basename = os.path.basename(input_file)
-        conv(input_file, os.path.join(OUT_FOLDER, basename + '.mp3'))
+        out_file = os.path.join(OUT_FOLDER, basename + '.mp3')
+        conv(input_file, out_file)
+        print("Converted " + input_file + " -> " + out_file)
 
 
 
